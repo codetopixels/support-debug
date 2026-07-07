@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    width: 340px;
+    margin: 0;
+    padding: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 14px;
+    line-height: 1.45;
+  }
+  #status {
+    text-align: center;
+    margin-bottom: 14px;
+  }
+  #status .big {
+    font-size: 40px;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  #status h1 {
+    font-size: 17px;
+    margin: 0 0 4px;
+  }
+  #status p {
+    margin: 0;
+    opacity: 0.75;
+  }
+  #summary {
+    border-radius: 8px;
+    padding: 10px 12px;
+    margin-bottom: 14px;
+    background: rgba(125, 125, 125, 0.12);
+    font-size: 13px;
+  }
+  #summary ul {
+    margin: 4px 0 0;
+    padding-left: 18px;
+  }
+  button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 0;
+    border-radius: 8px;
+    background: #2563eb;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  button:hover { background: #1d4ed8; }
+  details { margin-top: 12px; }
+  summary { cursor: pointer; font-size: 12px; opacity: 0.7; }
+  textarea {
+    width: 100%;
+    height: 160px;
+    margin-top: 8px;
+    box-sizing: border-box;
+    font-family: ui-monospace, Menlo, Consolas, monospace;
+    font-size: 11px;
+  }
+  .hidden { display: none; }
+</style>
+</head>
+<body>
+  <div id="status">
+    <div class="big" id="status-icon">&#8987;</div>
+    <h1 id="status-title">Gathering details&hellip;</h1>
+    <p id="status-detail"></p>
+  </div>
+  <div id="summary" class="hidden"></div>
+  <button id="copy-btn" class="hidden">Copy again</button>
+  <details id="report-details" class="hidden">
+    <summary>View what was copied</summary>
+    <textarea id="report-text" readonly></textarea>
+  </details>
+  <script src="popup.js"></script>
+</body>
+</html>
